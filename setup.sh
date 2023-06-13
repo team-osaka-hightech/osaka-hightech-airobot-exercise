@@ -1,3 +1,5 @@
+#!/bin/sh
+
 sudo apt-get update
 sudo apt-get install python3-sklearn
 
@@ -34,5 +36,3 @@ cd examples/lite/examples/object_detection/raspberry_pi
 sh setup.sh
 
 sudo apt install libportaudio2
-cd ~/examples/lite/examples/object_detection/raspberry_pi
-python3 detect.py --model efficientdet_lite0.tflite --cameraId 0
