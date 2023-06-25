@@ -4,6 +4,7 @@
 --
 
 セットアップ用のスクリプトを実行する場合は、まず以下のコマンドでスクリプトファイル(Raw)をダウンロードします。
+###### 『$』はすでに表示されているので入力の必要ありません。説明内でコマンドであることを示します
 ```
 $ wget "https://raw.githubusercontent.com/team-osaka-hightech/osaka-hightech-airobot-exercise/main/setup.sh"
 ```
@@ -34,3 +35,14 @@ $ sh object_detech.sh
 ```
 コマンドを実行すると、カメラ映像が表示され、リアルタイムで物体認識が行われます。
 
+
+## detect.pyを改造して使う
+先ほどのデモは、リアルタイム物体認識を画面上で確認するだけでした。次は、認識した結果を用いて色々活用してみましょう。  
+まずはdetect.pyの置いてあるディレクトリに移動します。
+`/examples/lite/examples/object_detection/raspberry_pi`
+
+ここに置いてある`detect.py`をテキストエディタ等で開き、このリポジトリに置いてある`detect.py`の内容と置き換えます。  
+置き換えたファイルは、人間(person)を検出したら、その中心座標(x,y)を表示しつつ、GPIOのpin26をON/OFFします。LEDを接続して確認してください。  
+
+これを使って次のアイデアを実現しましょう。  
+- 人を検出したらGPIOで2つのモーターを制御し、人のいる方向へ進むロボットを作る
