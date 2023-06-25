@@ -31,7 +31,7 @@ $ wget "https://raw.githubusercontent.com/team-osaka-hightech/osaka-hightech-air
 RaspberryPiにUSBカメラ等を接続します。  
 ここで、
 ```
-$ sh object_detech.sh
+$ sh object_detect.sh
 ```
 コマンドを実行すると、カメラ映像が表示され、リアルタイムで物体認識が行われます。
 
